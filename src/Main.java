@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 // task 1
@@ -20,10 +22,12 @@ public class Main {
         }
 //task 3
 
-        int currentYear = 2022;
+        int currentYear = LocalDate.now().getYear();
+        int start = currentYear -200;
+        int end = currentYear +100;
 
-        for (int year = currentYear - 200 ; year <= currentYear + 100; year ++){
-            if (year %79 == 0) {
+        for (int year = start ; year <= end; year ++){
+            if (year % 79 == 0) {
                 System.out.println("year = " + year);
             }
         }
